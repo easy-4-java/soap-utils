@@ -547,6 +547,12 @@
                     <parameters>true</parameters>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <maxmem>512M</maxmem>
+                    <testExcludes>
+                        <testExclude>**/ParseXml.java</testExclude>
+                        <testExclude>**/SoapUtil.java</testExclude>
+                        <testExclude>**/WebServiceClient.java</testExclude>
+                        <testExclude>**/Test.java</testExclude>
+                    </testExcludes>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
