@@ -49,7 +49,7 @@
                 <lombok.version>1.18.46</lombok.version>
                 <n52-xml-soap.version>2.7.0</n52-xml-soap.version>
                 <saxon.version>9.9.1-8</saxon.version>
-                <soapui.version>5.4.0</soapui.version>
+                <soapui.version>5.4.0-easy4j</soapui.version>
                 <xercesImpl.version>2.12.2</xercesImpl.version>
                 <!-- Maven Plugin versions -->
                 <maven-central-publishing-plugin.version>0.11.0</maven-central-publishing-plugin.version>
@@ -106,7 +106,7 @@
         <maven-jacoco-plugin.version>0.8.15</maven-jacoco-plugin.version>
         <n52-xml-soap.version>2.7.0</n52-xml-soap.version>
         <saxon.version>9.9.1-8</saxon.version>
-        <soapui.version>5.4.0</soapui.version>
+        <soapui.version>5.4.0-easy4j</soapui.version>
         <xercesImpl.version>2.12.2</xercesImpl.version>
     </properties>
     <!-- 依赖版本统一管理（dependencyManagement） -->
@@ -592,6 +592,12 @@
                     <parameters>true</parameters>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <maxmem>512M</maxmem>
+                    <testExcludes>
+                        <testExclude>**/ParseXml.java</testExclude>
+                        <testExclude>**/SoapUtil.java</testExclude>
+                        <testExclude>**/WebServiceClient.java</testExclude>
+                        <testExclude>**/Test.java</testExclude>
+                    </testExcludes>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
