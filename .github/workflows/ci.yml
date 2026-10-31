@@ -46,7 +46,7 @@ jobs:
             -Dfile="${dependency_root}/SoapUI Jar/com/eviware/soapui/5.4.0/soapui-5.4.0.jar" \
             -DgroupId=com.eviware \
             -DartifactId=soapui \
-            -Dversion=5.4.0 \
+            -Dversion=5.4.0-easy4j \
             -Dpackaging=jar \
             -DgeneratePom=true
 
